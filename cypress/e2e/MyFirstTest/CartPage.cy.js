@@ -19,36 +19,6 @@ describe("home page", () => {
     })
 
     //Methods
-    Cypress.Commands.add('GetBambaProductName', () => {
-        cy.BambaProductName()
-        .should('exist')
-        .invoke('text')
-        .then((text) => {
-            cy.log(text) 
-            return (text)
-        })
-    })
-
-    Cypress.Commands.add('GetBambaProductPrice', () => {
-        cy.BambaProductPrice()
-        .should('exist')
-        .invoke('text')
-        .then((text) => {
-            cy.log(text)
-            return (text)
-        })
-    })
-
-    Cypress.Commands.add('GetBambaProductImage', () => {
-        cy.BambaProductImage()
-        .should('exist')
-        .should('have.attr', 'src')
-        // .invoke('attr', 'src')
-        .then((src) => {
-          cy.log(`Image Source: ${src}`)  
-          return (text)
-        })
-    })
 
     Cypress.Commands.add('ValidateBambaProductName', (productName) => {  
         cy.BambaProductNameCart() 
